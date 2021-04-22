@@ -1,13 +1,8 @@
-## Guia rápido de mysql
+# Guia rápido de mysql
 
-# Considere a seguinte criação das tabelas Cliente e Pedido: **
-CREATE TABLE Cliente (
-id INTEGER PRIMARY KEY AUTOINCREMENT,
-nome varchar(255),
-sobrenome varchar(255)
-);
+**Considere a seguinte criação das tabelas Cliente e Pedido:**
 
-
+Tabela Cliente:
 		mysql> CREATE TABLE Cliente(
 			-> id INTEGER PRIMARY KEY AUTO_INCREMENT,
 			-> nome VARCHAR(255),
@@ -25,16 +20,7 @@ sobrenome varchar(255)
 		+-----------+--------------+------+-----+---------+----------------+
 		3 rows in set (0.00 sec)
 
-
-
-
-CREATE TABLE Pedidos (
-id INTEGER PRIMARY KEY AUTOINCREMENT,
-cliente_id int(5),
-produto varchar(255),
-preco decimal(5,2)
-);
-
+Tabela Pedidos:
 
 		mysql> CREATE TABLE Pedidos(
 			-> id INTEGER PRIMARY KEY AUTO_INCREMENT,
@@ -58,7 +44,7 @@ preco decimal(5,2)
 
 
 
-# Baseado na criação das tabelas acima, responda com a declaração SQL correta para: **
+**Baseado na criação das tabelas acima, responda com a declaração SQL correta para:**
 A - Criar uma Coluna de email na tabela Cliente
 		mysql> ALTER TABLE Cliente
 			-> ADD COLUMN email VARCHAR(20) AFTER sobrenome;
@@ -76,7 +62,7 @@ A - Criar uma Coluna de email na tabela Cliente
 		+-----------+--------------+------+-----+---------+----------------+
 		4 rows in set (0.00 sec)
 
-B - Inserir, 3 clientes na tabela Cliente com os seguintes dados:
+**B - Inserir, 3 clientes na tabela Cliente com os seguintes dados:**
 -José Silva, email: jose@cb.com.br
 -João Pedro, email: joao@pf.com.br
 -Pedro Silva, email : pedro@ex.com.
@@ -110,7 +96,7 @@ B - Inserir, 3 clientes na tabela Cliente com os seguintes dados:
 
 
 
-C – Inserir um pedido para cada cliente com os seguintes dados:
+**C – Inserir um pedido para cada cliente com os seguintes dados:**
 -Para o cliente 1: Produto: Geladeira Brastemp, Preço: 1800,00
 -Para o cliente 2: Produto: Fogão Consul, Preço 850,90
 -Para o cliente 3: Produto: Celular Iphone XR, Preço 3399,00
@@ -174,7 +160,7 @@ C – Inserir um pedido para cada cliente com os seguintes dados:
 		+----+------------+--------------------+---------+
 
 
-D - Selecionar todos os pedidos de clientes com sobrenome Silva
+**D - Selecionar todos os pedidos de clientes com sobrenome Silva**
 
 		mysql> SELECT * FROM Cliente;
 		+----+-------+-----------+----------------+
