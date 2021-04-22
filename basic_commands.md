@@ -3,6 +3,7 @@
 **Considere a seguinte criação das tabelas Cliente e Pedido:**
 
 Tabela Cliente:
+
 		mysql> CREATE TABLE Cliente(
 			-> id INTEGER PRIMARY KEY AUTO_INCREMENT,
 			-> nome VARCHAR(255),
@@ -46,6 +47,7 @@ Tabela Pedidos:
 
 **Baseado na criação das tabelas acima, responda com a declaração SQL correta para:**
 A - Criar uma Coluna de email na tabela Cliente
+
 		mysql> ALTER TABLE Cliente
 			-> ADD COLUMN email VARCHAR(20) AFTER sobrenome;
 		Query OK, 0 rows affected (0.41 sec)
@@ -63,9 +65,10 @@ A - Criar uma Coluna de email na tabela Cliente
 		4 rows in set (0.00 sec)
 
 **B - Inserir, 3 clientes na tabela Cliente com os seguintes dados:**
--José Silva, email: jose@cb.com.br
--João Pedro, email: joao@pf.com.br
--Pedro Silva, email : pedro@ex.com.
+
+- José Silva, email: jose@cb.com.br
+- João Pedro, email: joao@pf.com.br
+- Pedro Silva, email : pedro@ex.com.
 
 
 		mysql> INSERT INTO Cliente(nome, sobrenome, email)
@@ -97,11 +100,12 @@ A - Criar uma Coluna de email na tabela Cliente
 
 
 **C – Inserir um pedido para cada cliente com os seguintes dados:**
--Para o cliente 1: Produto: Geladeira Brastemp, Preço: 1800,00
--Para o cliente 2: Produto: Fogão Consul, Preço 850,90
--Para o cliente 3: Produto: Celular Iphone XR, Preço 3399,00
+- Para o cliente 1: Produto: Geladeira Brastemp, Preço: 1800,00
+- Para o cliente 2: Produto: Fogão Consul, Preço 850,90
+- Para o cliente 3: Produto: Celular Iphone XR, Preço 3399,00
 
 		Change decimal to fit values xxxx.xx (6 digits and 2 are decimal)
+		
 		mysql> DESCRIBE Pedidos;
 		+------------+--------------+------+-----+---------+----------------+
 		| Field      | Type         | Null | Key | Default | Extra          |
@@ -195,12 +199,14 @@ A - Criar uma Coluna de email na tabela Cliente
 
 
 **E - Apagar a tabela Pedidos** 
+
 		mysql> DROP TABLE Pedidos;
 		Query OK, 0 rows affected (0.14 sec)
     
     
 
 # Links
-https://www.mysqltutorial.org/mysql-decimal/
 https://www.tutorialspoint.com/mysql/mysql-using-joins.htm
+https://www.mysqltutorial.org/mysql-decimal/
+
 
